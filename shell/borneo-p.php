@@ -64,7 +64,7 @@ if (is_logged_in()) {
     <!DOCTYPE html>    
 <html>
 <head>
-<title>BorneoXploit</title>
+<title>Cowo-Aneh</title>
 <body bgcolor="black" text="red">
 <center>YAMEEEEE SENPAIIII <br><h4><br>
 <br>
